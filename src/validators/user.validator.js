@@ -19,5 +19,5 @@ const updateUserValidator = (userData) => {
 };
 
 module.exports = {
-    updateUserValidator
-  };
+  updateUserValidator,
+};

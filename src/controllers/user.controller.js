@@ -20,13 +20,13 @@ exports.getUserById = async (req, res) => {
 
 exports.updateUser = async (req, res) => {
   try {
-        const headerId = req.user._id.toString();
-      await userValidator.updateUserValidator(req.body);
-      const user = await userService.updateUser(headerId, req.body);
-      if (!user) {
-        return res.status(404).json({ message: "User not found" });
-      }
-      res.status(200).json(user);
+    const headerId = req.user._id.toString();
+    await userValidator.updateUserValidator(req.body);
+    const user = await userService.updateUser(headerId, req.body);
+    if (!user) {
+      return res.status(404).json({ message: "User not found" });
+    }
+    res.status(200).json(user);
   } catch (error) {
     res.status(400).json({ message: error.message });
   }
@@ -36,14 +36,14 @@ exports.deleteUser = async (req, res) => {
   try {
     const headerId = req.user._id.toString();
     if (headerId == req.params.id) {
-    const user = await userService.deleteUser(req.params.id);
-    if (!user) {
-      return res.status(404).json({ message: "User not found" });
+      const user = await userService.deleteUser(req.params.id);
+      if (!user) {
+        return res.status(404).json({ message: "User not found" });
+      }
+      res.status(200).json(user);
+    } else {
+      return res.status(404).json({ message: "You can delete only your data" });
     }
-    res.status(200).json(user);
-}else{
-    return res.status(404).json({ message: "You can delete only your data" });
-}
   } catch (error) {
     res.status(500).json({ message: error.message });
   }

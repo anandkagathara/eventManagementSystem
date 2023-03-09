@@ -1,4 +1,3 @@
-
 const Joi = require("joi");
 const User = require("../models/user.model");
 
@@ -16,7 +15,6 @@ const authValidator = (userData) => {
   }
 };
 
-
 module.exports = {
-    authValidator
-  };
+  authValidator,
+};

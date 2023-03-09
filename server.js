@@ -35,7 +35,7 @@ app.use(express.urlencoded({ extended: true }));
 // Set up routes
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
-// app.use("/api/events", eventRoutes);
+app.use("/api/events", eventRoutes);
 
 // Start the server
 const PORT = process.env.PORT || 4000;

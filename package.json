@@ -1,0 +1,22 @@
+{
+  "name": "eventmanagementsystem",
+  "version": "1.0.0",
+  "description": "Event Management System",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anandkagathara/eventManagementSystem.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anandkagathara/eventManagementSystem/issues"
+  },
+  "homepage": "https://github.com/anandkagathara/eventManagementSystem#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

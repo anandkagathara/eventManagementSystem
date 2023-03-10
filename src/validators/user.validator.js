@@ -7,7 +7,6 @@ const updateUserValidator = (userData) => {
     lastName: Joi.string().optional(),
     dateOfBirth: Joi.date().optional(),
     gender: Joi.string().valid("Male", "Female", "Other").optional(),
-    profilePhotoUrl: Joi.string().optional().allow(null),
   });
 
   const { error } = schema.validate(userData);

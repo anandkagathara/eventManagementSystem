@@ -4,7 +4,6 @@ const eventValidator = require("../validators/event.validator");
 exports.createEvent = async (req, res) => {
   try {
     const userID = req.user._id.toString();
-
     await eventValidator.creaateeventValidator(req.body);
     const event = await eventService.createEvent(userID, req.body);
     res.status(200).json(event);

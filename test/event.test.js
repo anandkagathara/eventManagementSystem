@@ -55,7 +55,7 @@ describe("Event Service", function () {
       maxParticipants: 10,
       place: 'Ahmedabad',
       eventTime: "13:00"
-      };
+      };    
       const event = await eventService.createEvent(testUser._id, eventData);
       assert(event);
       assert.equal(event.name, eventData.name);
@@ -122,11 +122,10 @@ describe("Event Service", function () {
     };
     const event = await eventService.createEvent(testUser._id, eventData);
 
-    // Join the event to reach maximum capacity
     await eventService.joinEvent(event._id, testUser._id);
     await eventService.joinEvent(event._id, testUser._id);
 
-    // Try to join the event again
+ 
     try {
       await eventService.joinEvent(event._id, testUser._id);
     } catch (error) {

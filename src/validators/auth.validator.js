@@ -13,7 +13,7 @@ const authValidator = (userData) => {
     const statusCode = 400; // Bad Request
     throw { statusCode, message: errorMessage };
   }
-};
+};  
 
 module.exports = {
   authValidator,

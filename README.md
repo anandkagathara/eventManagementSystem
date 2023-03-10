@@ -5,7 +5,6 @@ npm run test test/user.test.js
 
 
 
-
 Task for NodeJS practical
 
 > You need to create a public github repository and push the code there.

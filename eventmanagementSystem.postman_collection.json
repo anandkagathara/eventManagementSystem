@@ -1,0 +1,419 @@
+{
+	"info": {
+		"_postman_id": "56b728d4-4308-45e7-8c3c-6ac7bedea387",
+		"name": "eventmanagementSystem",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17901072"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "getUsers",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDA5NmFiMjIzZmRlZDY0NTExYTdjYmUiLCJpYXQiOjE2NzgzMzg3NTN9.J_KnW6NPlVoYjMjch7t43HcjyHfjySEL5eR-qaiSYH8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:4000/api/users/",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateUser",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDA5NmFiMjIzZmRlZDY0NTExYTdjYmUiLCJpYXQiOjE2NzgzNDAxMzV9.lyfQViLQ_ep2phd2RTHsgrL8hnxpWmFtjsjAeoHaVg4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"AK\",\r\n    \"lastName\": \"Doe\",\r\n    \"dateOfBirth\": \"1990-01-01\",\r\n    \"gender\": \"Male\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/users/updateUser",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"users",
+								"updateUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteUser",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDA5NmM3Nzc5ZGY4YjBkMDQ0Zjk0MWUiLCJpYXQiOjE2NzgzMzkxOTd9.A8DyuxFkd9GSnMP8Zqgb162xyAe5nRPdcxzuOQSwHcQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:4000/api/users/64096c7779df8b0d044f941e",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"users",
+								"64096c7779df8b0d044f941e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUserByID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDA5NmFiMjIzZmRlZDY0NTExYTdjYmUiLCJpYXQiOjE2NzgzNDAxMzV9.lyfQViLQ_ep2phd2RTHsgrL8hnxpWmFtjsjAeoHaVg4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:4000/api/users/64096ab223fded64511a7cbe",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"users",
+								"64096ab223fded64511a7cbe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateProfilePhoto",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDA5NmFiMjIzZmRlZDY0NTExYTdjYmUiLCJpYXQiOjE2NzgzNDAxMzV9.lyfQViLQ_ep2phd2RTHsgrL8hnxpWmFtjsjAeoHaVg4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "profilePhoto",
+									"type": "file",
+									"src": "/C:/Users/bholu/Downloads/https___csdev.site_realestate-crm_resources_assets_images_bill (1).jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:4000/api/users/updatePhoto",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"users",
+								"updatePhoto"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "signUp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"image@gmail.com\",\r\n    \"password\":\"Image@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/auth/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logIn",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"zeel@gmail.com\",\r\n    \"password\":\"Zeel@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Events",
+			"item": [
+				{
+					"name": "createEvent",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDA5NmFiMjIzZmRlZDY0NTExYTdjYmUiLCJpYXQiOjE2NzgzNDE1ODV9.4S6ozpKuZPRdphnK959wONLe9amJsq7-OEvqfQUVLzQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"My awesome event\",\r\n  \"description\": \"This is a description of my awesome event\",\r\n  \"eventDate\": \"2023-03-15\",\r\n  \"eventTime\": \"13:00\",\r\n  \"place\": \"123 Main St, Anytown USA\",\r\n  \"participants\": [\"640849f4f305e46a670f16f6\", \"64084eae311e3ea87fb2ec42\"],\r\n  \"maxParticipants\": 2\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/events/createEvent",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"events",
+								"createEvent"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "viewEvents",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDA5NmFiMjIzZmRlZDY0NTExYTdjYmUiLCJpYXQiOjE2NzgzNDE1ODV9.4S6ozpKuZPRdphnK959wONLe9amJsq7-OEvqfQUVLzQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:4000/api/events/",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"events",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "joinEvent",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDA5NmFiMjIzZmRlZDY0NTExYTdjYmUiLCJpYXQiOjE2NzgzNDE1ODV9.4S6ozpKuZPRdphnK959wONLe9amJsq7-OEvqfQUVLzQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\":\"64096f56b684114506260bd8\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/events/join/6409812b365756fd5aa32946",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"events",
+								"join",
+								"6409812b365756fd5aa32946"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "leaveEvent",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDA5NmFiMjIzZmRlZDY0NTExYTdjYmUiLCJpYXQiOjE2NzgzNDE1ODV9.4S6ozpKuZPRdphnK959wONLe9amJsq7-OEvqfQUVLzQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\":\"64096f56b684114506260bd8\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/events/leave/6409812b365756fd5aa32946",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"events",
+								"leave",
+								"6409812b365756fd5aa32946"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getEventParticipants",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDA5NmFiMjIzZmRlZDY0NTExYTdjYmUiLCJpYXQiOjE2NzgzNDE1ODV9.4S6ozpKuZPRdphnK959wONLe9amJsq7-OEvqfQUVLzQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:4000/api/events/participants/6409812b365756fd5aa32946",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"events",
+								"participants",
+								"6409812b365756fd5aa32946"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getEventCreator",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDA5NmFiMjIzZmRlZDY0NTExYTdjYmUiLCJpYXQiOjE2NzgzNDE1ODV9.4S6ozpKuZPRdphnK959wONLe9amJsq7-OEvqfQUVLzQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:4000/api/events/creator/6409812b365756fd5aa32946",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"events",
+								"creator",
+								"6409812b365756fd5aa32946"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
